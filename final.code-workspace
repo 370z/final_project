@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/G1 (4-6-10-22-24-37-40) - 227A - SourceCodes"
+		},
+		{
+			"path": "../../Desktop/project_node/asmr_hub_stack"
+		},
+		{
+			"path": "../../Downloads/adamwathanss-tuibeta/react/components"
+		},
+		{
+			"path": "../html"
+		},
+		{
+			"path": "../../Downloads/G1 (4-6-10-22-24-37-40) - 227A - SourceCodes/client"
+		},
+		{
+			"path": "../../Downloads/e-commerce-nextjs-redux-main"
+		},
+		{
+			"path": "../../Desktop/project_node/fast_api_project/frontend"
+		},
+		{
+			"path": "../../Downloads/test_id_card"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html",
+		"nuxt.isNuxtApp": false
+	}
+}

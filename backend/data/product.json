@@ -1,0 +1,50 @@
+[
+  {
+    "name": "2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray",
+    "price": 39900,
+    "description": "Apple-designed M1 chip for a giant",
+    "rating": 3.55,
+    "images": [
+      {
+        "public_id": "Product/prom1_1",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71an9eiBxpL._AC_SL1500_.jpg"
+      },
+      {
+        "public_id": "Product/prom1_2",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81zKcC5wJ6L._AC_SL1500_.jpg"
+      },
+      {
+        "public_id": "Product/prom1_3",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/913qQiDRZQL._AC_SL1500_.jpg"
+      }
+    ],"category":"Electronics",
+    "seller":"Amazon",
+    "stock":50,
+    "numOfReviews":33,
+    "reviews":[]
+  },
+  {
+    "name": "2020 Apple MacBook Air with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray",
+    "price": 32900,
+    "description": "Apple-designed M1 chip for a giant",
+    "rating": 3.55,
+    "images": [
+      {
+        "public_id": "Product/airm1_1",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71an9eiBxpL._AC_SL1500_.jpg"
+      },
+      {
+        "public_id": "Product/airm1_2",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81zKcC5wJ6L._AC_SL1500_.jpg"
+      },
+      {
+        "public_id": "Product/airm1_3",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/913qQiDRZQL._AC_SL1500_.jpg"
+      }
+    ],"category":"Electronics",
+    "seller":"Amazon",
+    "stock":99,
+    "numOfReviews":13,
+    "reviews":[]
+  }
+]
