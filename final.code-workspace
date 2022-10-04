@@ -1,0 +1,47 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/G1 (4-6-10-22-24-37-40) - 227A - SourceCodes"
+		},
+		{
+			"path": "../../Desktop/project_node/asmr_hub_stack"
+		},
+		{
+			"path": "../html"
+		},
+		{
+			"path": "../../Downloads/G1 (4-6-10-22-24-37-40) - 227A - SourceCodes/client"
+		},
+		{
+			"path": "../../Downloads/e-commerce-nextjs-redux-main"
+		},
+		{
+			"path": "../../Desktop/project_node/fast_api_project/frontend"
+		},
+		{
+			"path": "../Learning/Nodejs"
+		},
+		{
+			"path": "../components"
+		},
+		{
+			"path": "../test"
+		},
+		{
+			"path": "../../Downloads/maims_frontend-main/frontend"
+		},
+		{
+			"path": "../../Downloads/maims_frontend-main/api"
+		},
+		{
+			"path": "../gobook"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html",
+		"nuxt.isNuxtApp": false
+	}
+}
