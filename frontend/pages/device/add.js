@@ -10,7 +10,10 @@ import {
   OfficeBuildingIcon,
   SearchIcon,
 } from "@heroicons/react/solid";
-import { instance, setContext } from "../../services/_Axios";
+// import { instance, setContext } from "../../services/_Axios";
+import { ApiClient, setContext } from "../../services/_Axios";
+import ButtonLoader from "../../components/ButtonLoader"
+import Link from "next/link"
 DeviceScan.layout = "Default";
 
 const statusStyles = {
@@ -47,15 +50,20 @@ const people = [
 ];
 
 export default function DeviceScan({ results, userData }) {
-  const scanDevice = async() => {
+  const scanDevice = async (e) => {
+    e.preventDefault();
+    console.log("Scan Device", e, session);
     setIsScan(true)
-    try{
-      const scanDevice = await instance.get("/device/scan")
-      if(scanDevice){
+    try {
+      console.log("Scanning....")
+      if (session?.user.accessToken) {
+      const scanDevice = await ApiClient().get("/device/me")
+      if (scanDevice) {
         console.log(scanDevice);
         setIsScan(false)
       }
-    }catch (err){
+    }
+    } catch (err) {
       setIsScan(false)
       console.log(err);
     }
@@ -168,32 +176,15 @@ export default function DeviceScan({ results, userData }) {
                         </h2>
                         <div className="mt-1 text-sm text-gray-500">
                           <button
-                            onClick={()=>{
-                              scanDevice()
-                            }}
+                            onClick={
+                              (e) => {
+                                scanDevice(e)
+                              }
+                            }
                             className="mt-1 mb-1 bg-sky-700 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
                             disabled={isScan}
                           >
-{isScan && (<svg
-                              class="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                            >
-                              <circle
-                                class="opacity-25"
-                                cx="12"
-                                cy="12"
-                                r="10"
-                                stroke="currentColor"
-                                stroke-width="4"
-                              ></circle>
-                              <path
-                                class="opacity-75"
-                                fill="currentColor"
-                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                              ></path>
-                            </svg>)}
+                            {isScan && (<ButtonLoader />)}
                             Scan
                           </button>
                           <Listbox value={selected} onChange={setSelected}>
@@ -692,8 +683,8 @@ export async function getServerSideProps(context) {
     };
   }
   if (session?.user.accessToken) {
-    const results = await instance.get("/devices/me");
-    const results2 = await instance.get("/me");
+    const results = await ApiClient().get("/devices/me");
+    const results2 = await ApiClient().get("/me");
 
     return {
       props: {

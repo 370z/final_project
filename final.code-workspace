@@ -38,6 +38,18 @@
 		},
 		{
 			"path": "../gobook"
+		},
+		{
+			"path": "../Learning"
+		},
+		{
+			"path": "../nginx_php_mysql_docker"
+		},
+		{
+			"path": "../../Downloads/iot-device-management-master"
+		},
+		{
+			"path": "../cmtc_dev/server_room_backend"
 		}
 	],
 	"settings": {

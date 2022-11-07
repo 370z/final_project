@@ -26,9 +26,10 @@ import {
 
 import Sidebar from "../components/Sidebar";
 import SidebarMobile from "../components/SidebarMobile";
-import axios from "axios";
+// import axios from "axios";
 import { useRouter } from "next/router";
-import  {instance,setContext}  from "../services/_Axios";
+import { ApiClient, setContext } from "../services/_Axios";
+// import {setToken } from "../services/__Axios"
 Devices.layout = "Default";
 
 const cards = [
@@ -317,8 +318,10 @@ export async function getServerSideProps(context) {
     };
   }
   if (session?.user?.accessToken) {
-    const results = await instance.get("/devices/me");
-    const results2 = await instance.get("/me");
+    // setToken(session.user.accessToken)
+    const results = await ApiClient().get("/devices/me");
+    const results2 = await ApiClient().get("/me");
+    console.log("RESULTS", results)
     return {
       props: {
         componentName: "Devices",
